@@ -363,6 +363,10 @@ span{
     text-align: center;
     border-bottom: 2px solid black;
 }
+/* No me deja cambiar el color de las letras del menú */
+span:hover{
+    background-color: black;
+}
 ul{
     list-style-type: none;
     padding: 5px;
@@ -506,4 +510,47 @@ textarea{
     display: flex;
     justify-content: center;
 }
+/* GRADIENTES */
+.gradLineal{
+    background-image: linear-gradient(#FAA6B3,#753565,black);
 }
+/* ANIMACIÓN */
+.textoAnimado{
+    animation-name: texto;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
+}
+.logoAnimado{
+    animation-name: logo;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+/* KEYFRAMES */
+@keyframes texto{
+    from{
+        transform: translate(-200px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes logo{
+    0%{
+        border-radius: 50%;
+    }
+    30%{
+        transform: rotateY(40deg);
+    }
+    50%{
+        transform: rotateX(25deg);
+    }
+    100%{
+        border-radius: 50%;
+    }
+}
+}
+
+
